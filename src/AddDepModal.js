@@ -52,7 +52,7 @@ export class AddDepModal extends Component{
                                     </Form.Group>
                                     <Form.Group controlId='Monto'>
                                         <Form.Label>Monto</Form.Label>
-                                        <Form.Control type='text' name='Monto' placeholder='Monto' required></Form.Control>
+                                        <Form.Control type='text' name='Monto' placeholder='Monto' onKeyPress={(event) => { if (!/[0-9]/.test(event.key)) { event.preventDefault();}}} required></Form.Control>
                                     </Form.Group>
                                     <Form.Group controlId='Moneda'>
                                         <Form.Label>Moneda</Form.Label>
